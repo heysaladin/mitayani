@@ -25,17 +25,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
       margin: 0 auto;
       font-family: sans-serif;
       color: gray;
-    }
-
-    body form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      text-align: center;
     }
 
     h1 {
@@ -47,15 +40,13 @@
 
 <body>
   <div>
-    <form action="mailto:heysaladin@gmail.com" method="GET">
-      <h1>
-        mitayani
-      </h1>
-      <p>
-        We are a studio that provides UI Design services.
-      </p>
-      <input type="submit" value="contact us" />
-    </form>
+    <h1>
+      mitayani
+    </h1>
+    <p>
+      We are a studio that provides UI Design services.
+    </p>
+    <button onclick="location.href='mailto:heysaladin@gmail.com';">Contact us!</button>
   </div>
 </body>
 
