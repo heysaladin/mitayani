@@ -21,18 +21,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
   <style>
+    /*  ============
+        global style
+        ============  */
+
     body {
       margin: 0;
       font-family: "Avenir Next LT Pro Regular", Arial, Helvetica, sans-serif;
     }
 
-
-    /* container */
-
-    .container {
-      margin: 0 auto;
-      max-width: 1200px;
+    a {
+      text-decoration: none;
+      color: gray;
     }
+
+    /*  ============
+        layout style
+        ============  */
+
 
     /* header */
     #header nav {
@@ -43,11 +49,24 @@
 
     /* footer */
     #footer {
-      width: 100%;
+      width: 94%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 0px 3% 24px;
     }
+
+    .container {
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+
+    /*  ============
+        custom style
+        ============  */
+
+    /* topnav */
 
     .topnav {
       overflow: hidden;
@@ -79,13 +98,49 @@
       display: none;
     }
 
-    #logo-site > img {
+    #logo-site>img {
       height: 64px;
     }
 
+    /* social-media */
+
+    .social-media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-media a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 4px;
+    }
+
+    .social-media a:first-child {
+      margin: 0 4px 0 0px;
+    }
+
+    .social-media a:last-child {
+      margin: 0 0px 0 4px;
+    }
+
+    .social-media a span::before {
+      display: block;
+      text-align: center;
+      width: 16px;
+      height: 16px;
+      padding: 8px;
+      color: white;
+      background-color: grey;
+      border-radius: 50%;
+    }
+
+
     /* section */
+
     section#opening {
-      padding: 50px 0 100px;
+      padding: 50px 0 80px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -96,17 +151,17 @@
       text-align: center;
     }
 
-section#opening>h1 {
-  margin: 0 auto 40px;
-  font-size: 72pt;
-}
+    section#opening>h1 {
+      margin: 0 auto 30px;
+      font-size: 72pt;
+    }
 
     section#group {
-      padding: 100px 0 50px;
+      padding: 120px 0 50px;
     }
 
     section#action {
-      padding: 20px 0 160px;
+      padding: 70px 0 160px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -115,8 +170,8 @@ section#opening>h1 {
 
     section#action h3 {
       text-align: center;
-      font-size: 32pt;
-      margin: 0 auto 14px;
+      font-size: 48pt;
+      margin: 0 auto 18px;
     }
 
     .section-title>* {
@@ -125,6 +180,7 @@ section#opening>h1 {
     }
 
     /* grid */
+
     .grid {
       display: flex;
       flex-wrap: wrap;
@@ -139,10 +195,13 @@ section#opening>h1 {
       width: 100%;
     }
 
+    /* flex */
+
     .flex {
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: row;
     }
 
     .flex>* {
@@ -155,21 +214,29 @@ section#opening>h1 {
       width: auto;
     }
 
+    /* RESPONSIVE */
+
     @media screen and (max-width: 600px) {
 
       /* header */
+
       #header nav {
         display: block;
       }
 
       /* footer */
+
       #footer {
         display: block;
+        text-align: center;
       }
+
+      /* topnav */
 
       /* .topnav a:not(:first-child) {
         display: none;
       } */
+
       .topnav a:not([href="#home"]) {
         display: none;
       }
@@ -177,6 +244,47 @@ section#opening>h1 {
       .topnav a.icon {
         float: right;
         display: block;
+        padding: 30px 24px;
+      }
+
+      .topnav a {
+        padding: 4px 6px;
+      }
+
+      /* section */
+
+      section#opening {
+        padding: 50px 24px 50px;
+      }
+
+      section#opening>h1 {
+        margin: 0 auto 20px;
+        font-size: 28pt;
+      }
+
+      section#action h3 {
+        font-size: 36pt;
+      }
+
+      /* grid */
+
+      .grid>* {
+        width: 98%;
+        margin: 6px 1%;
+      }
+
+      /* flex */
+
+      .flex {
+        flex-direction: column;
+      }
+
+      .flex>* {
+        width: 98%;
+      }
+      /* social-media */
+      .social-media {
+        margin: 32px auto;
       }
     }
 
@@ -196,6 +304,10 @@ section#opening>h1 {
         float: none;
         display: block;
         text-align: left;
+      }
+
+      .topnav.responsive .right a:not([class="icon"]) {
+        padding: 26px 0 15px 30px;
       }
     }
   </style>
@@ -222,8 +334,9 @@ section#opening>h1 {
 
   <div class="container">
     <section id="opening">
-      <h1>Responsive Topnav Example</h1>
-      <p>Resize the browser window to see how it works.</p>
+      <h1>We are "Mitayani" creative team</h1>
+      <p>Omnivorous Creative Design. Graphic design, font, icon, illustration & template design (phisical or digital).
+      </p>
     </section>
     <section id="portfolio">
       <div class="grid">
@@ -258,7 +371,7 @@ section#opening>h1 {
       </div>
     </section>
     <section id="action">
-      <h3>ffdsfsfdsdf adfasdads sdsds</h3>
+      <h3>Wanna work together?</h3>
       <button onclick="location.href='mailto:heysaladin@gmail.com';"
         style="margin:24px auto 0;border:none;color:#fff;background-image:linear-gradient(135deg,#8254e5,#83afe3 150%);height:50px;padding:16px 32px;font-family:Montserrat,sans-serif;font-weight:700;font-size:.688rem;line-height:18px;letter-spacing:1.54px;text-transform:uppercase;border-radius:25px;box-shadow:0 11px 36px 0 rgb(70 89 138 / 25%);">Contact
         us!</button>
@@ -266,11 +379,11 @@ section#opening>h1 {
   </div>
 
   <footer id="footer">
-    <p>Resize the browser window to see how it works.</p>
+    <p>© 2018 Mitayani Creative. All rights reserved.</p>
     <div class="social-media">
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-google"></a>
+      <a href="#"><span class="fa fa-facebook"></span></a>
+      <a href="#"><span class="fa fa-twitter"></span></a>
+      <a href="#"><span class="fa fa-google"></span></a>
     </div>
   </footer>
 
